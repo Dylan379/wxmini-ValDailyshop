@@ -1,0 +1,109 @@
+<!--
+此文件为开发者工具生成，生成时间: 2023/7/5下午9:33:05
+使用方法：
+在 D:\WXminiprogramWorkSpace\瓦批的dailyShop\miniprogram\packageIndex\pages\index\index.wxml 引入模板
+
+```
+<import src="index.skeleton.wxml"/>
+<template is="skeleton" wx:if="{{loading}}" />
+```
+
+在 D:\WXminiprogramWorkSpace\瓦批的dailyShop\miniprogram\packageIndex\pages\index\index.wxss 中引入样式
+```
+@import "./index.skeleton.wxss";
+```
+
+更多详细信息可以参考文档：https://developers.weixin.qq.com/miniprogram/dev/devtools/skeleton.html
+-->
+<template name="skeleton">
+  <view class="sk-container">
+    <view class="index">
+      <view class="nav-bar-title">
+        <view>
+          <view data-index="0" class="sk-transparent sk-text-18-7500-861 sk-text">主页</view>
+          <view class="under-line"></view>
+        </view>
+        <view>
+          <view data-index="1" class="sk-transparent sk-text-18-7500-596 sk-text">捆绑包</view>
+          <view></view>
+        </view>
+        <view>
+          <view data-index="2" class="sk-transparent sk-text-18-7500-323 sk-text">夜市</view>
+          <view></view>
+        </view>
+        <view>
+          <view data-index="3" class="sk-transparent sk-text-18-7500-595 sk-text">我的</view>
+          <view></view>
+        </view>
+      </view>
+      <view class="header">
+        <view class="title">
+          <text class="sk-transparent sk-text-18-7500-534 sk-text">
+        Bojack#233,欢迎你！      </text>
+          <text decode="true" class="sk-transparent sk-text-18-7500-840 sk-text">
+        剩余&nbsp;&nbsp;&nbsp;R点:325&nbsp;&nbsp;VP:0      </text>
+        </view>
+      </view>
+      <view class="dailyShop">
+        <text class="sk-transparent sk-text-18-7500-310 sk-text" style="background-position-x: 50%;">今日商店</text>
+        <view class="displayDailyShop">
+          <swiper indicator-dots="true" current="0" autoplay="false">
+            <swiper-item style="position: absolute; width: 100%; height: 100%; transform: translate(0%, 0px) translateZ(0px);">
+              <image mode="aspectFit" style="background-image: url(https://media.valorant-api.com/contenttiers/60bca009-4182-7998-dee7-b8a2558dc369/displayicon.png);  background-color: #e772a7;" class="sk-image"></image>
+              <text class="weaponName sk-transparent sk-text-18-7500-817 sk-text" style="background-position-x: 50%;">紅蓮猛獸 暴徒</text>
+              <text class="weaponCost sk-transparent sk-text-18-7500-882 sk-text" style="background-position-x: 50%;">1775VP</text>
+            </swiper-item>
+          </swiper>
+        </view>
+      </view>
+      <view class="weaponSkinChromaIcon">
+        <image class="image-foucs sk-image" data-index="0" mode="true"></image>
+        <image data-index="1" mode="true" class="sk-image"></image>
+      </view>
+      <view class="showWeaponVideo">
+        <view class="weaponLevels">
+          <view data-id="0">
+            <view>
+              <view style="color:#e772a7;" class="sk-transparent sk-text-18-7500-232 sk-text">
+                等级1
+              </view>
+            </view>
+          </view>
+          <view data-id="1">
+            <view class="sk-transparent sk-text-18-7500-732 sk-text">
+              等级2
+            </view>
+          </view>
+          <view data-id="2">
+            <view class="sk-transparent sk-text-18-7500-930 sk-text">
+              等级3
+            </view>
+          </view>
+        </view>
+        <view class="weaponVideo">
+          <view src="https://valorant.dyn.riotcdn.net/x/videos/release-07.00/3def624b-44d0-226e-aa6c-73b73d849b17_default_universal.mp4" unit-id="true" show-fullscreen-btn="true" class="sk-transparent sk-text--Infinity-261 sk-text sk-image">00:13</view>
+        </view>
+      </view>
+      <view class="comment">
+        <view class="user-comment">
+          <view>
+            <text class="sk-transparent sk-text-18-7500-791 sk-text">来自用户--------的锐评:</text>
+          </view>
+          <view class="the-comment">
+            <text class="sk-transparent sk-text-18-7500-778 sk-text" style="background-position-x: 50%;">"暂无评论,去'我的'来点锐评吧"</text>
+          </view>
+          <view class="score">
+            <text decode="true" class="sk-transparent"></text>
+            <text class="sk-transparent sk-text-18-7500-161 sk-text">ta的评分是:暂无/100</text>
+          </view>
+        </view>
+        <view class="like">
+          <view is="miniprogram_npm/weui-miniprogram/icon/icon">
+            <view class="weui-icon icon--weui-icon" style="background:#d13639;width:50px;height:50px;mask-image:url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSIyNHB4IiBoZWlnaHQ9IjI0cHgiIHZpZXdCb3g9IjAgMCAyNCAyNCIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj4gICAgICAgIDx0aXRsZT4zLkljb25zL091dGxpbmVkL2xpa2U8L3RpdGxlPiAgICA8ZGVzYz5DcmVhdGVkIHdpdGggU2tldGNoLjwvZGVzYz4gICAgPGcgaWQ9IjMuSWNvbnMvT3V0bGluZWQvbGlrZSIgc3Ryb2tlPSJub25lIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCIgZmlsbC1vcGFjaXR5PSIwLjkiPiAgICAgICAgPGcgaWQ9ImNvbW1vbl9pY29uc19saWtlIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgzLjAwMDAwMCwgNS4wMDAwMDApIiBmaWxsPSIjMDAwMDAwIj4gICAgICAgICAgICA8cGF0aCBkPSJNMTYuMjg0NjM4Niw3LjY0NTA5NTI4IEMxNy43Mjg3NTU2LDYuMTU2NzUxODYgMTcuNzExODk3OSwzLjc4MTUzNzIgMTYuMjQzMzU1LDIuMzEyOTk0MjMgQzE0Ljc1OTM2MjYsMC44MjkwMDE5MjMgMTIuMzUzMzM1NywwLjgyOTAwMTkyMyAxMC44NjkzNDM0LDIuMzEyOTk0MjMgQzEwLjY3NzA3ODYsMi41MDUyNTkwNiAxMC40MzMyMDYzLDIuNzQwNDk5NzQgMTAuMTM2NjEzOCwzLjAxOTk0NTIgTDkuMzEzNzA4NSwzLjc5NTI3NTMzIEw4LjQ5MDgwMzI0LDMuMDE5OTQ1MiBDOC4xOTQyMTA3LDIuNzQwNDk5NzQgNy45NTAzMzg0MSwyLjUwNTI1OTA2IDcuNzU4MDczNTgsMi4zMTI5OTQyMyBDNi4yNzQwODEyNywwLjgyOTAwMTkyMyAzLjg2ODA1NDM1LDAuODI5MDAxOTIzIDIuMzg0MDYyMDQsMi4zMTI5OTQyMyBDMC45MTU1MzcxMDQsMy43ODE1MTkxNyAwLjg5ODU4MzE0NSw2LjE1Njg3MDM4IDIuMzI5NjczNjIsNy42MzI2MTczNSBMOS4zMTM2NjYsMTQuNjE2NjgyMyBMMTYuMjg0NjM4Niw3LjY0NTA5NTI4IFogTTEuNTM1NTMzOTEsMS40NjQ0NjYwOSBDMy40ODgxNTUzNiwtMC40ODgxNTUzNjUgNi42NTM5ODAyNiwtMC40ODgxNTUzNjUgOC42MDY2MDE3MiwxLjQ2NDQ2NjA5IEM4Ljc4OTQwODQzLDEuNjQ3MjcyOCA5LjAyNTExMDY5LDEuODc0NjMyNjIgOS4zMTM3MDg1LDIuMTQ2NTQ1NTUgQzkuNjAyMzA2MzEsMS44NzQ2MzI2MiA5LjgzODAwODU3LDEuNjQ3MjcyOCAxMC4wMjA4MTUzLDEuNDY0NDY2MDkgQzExLjk3MzQzNjcsLTAuNDg4MTU1MzY1IDE1LjEzOTI2MTYsLTAuNDg4MTU1MzY1IDE3LjA5MTg4MzEsMS40NjQ0NjYwOSBDMTkuMDI2MzQxMywzLjM5ODkyNDI5IDE5LjA0NDMzNTYsNi41MjQxMjA1IDE3LjE0NTg2Niw4LjQ4MDczMTE2IEwxMC4wMjA4MTUzLDE1LjYwNjYwMTcgQzkuNjMwMzExNDMsMTUuOTk3MTQ2NCA4Ljk5NzE0NjQ1LDE1Ljk5NzE3OTYgOC42MDY2MDE3MiwxNS42MDY2NzU3IEwxLjQ4MTE0MTA4LDguNDgxMTQxMDggQy0wLjQxNjkxODU5OCw2LjUyNDEyMDUgLTAuMzk4OTI0Mjk0LDMuMzk4OTI0MjkgMS41MzU1MzM5MSwxLjQ2NDQ2NjA5IFoiIGlkPSLlm77moIfpopzoibIiPjwvcGF0aD4gICAgICAgIDwvZz4gICAgPC9nPjwvc3ZnPg==);-webkit-mask-image:url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSIyNHB4IiBoZWlnaHQ9IjI0cHgiIHZpZXdCb3g9IjAgMCAyNCAyNCIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj4gICAgICAgIDx0aXRsZT4zLkljb25zL091dGxpbmVkL2xpa2U8L3RpdGxlPiAgICA8ZGVzYz5DcmVhdGVkIHdpdGggU2tldGNoLjwvZGVzYz4gICAgPGcgaWQ9IjMuSWNvbnMvT3V0bGluZWQvbGlrZSIgc3Ryb2tlPSJub25lIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCIgZmlsbC1vcGFjaXR5PSIwLjkiPiAgICAgICAgPGcgaWQ9ImNvbW1vbl9pY29uc19saWtlIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgzLjAwMDAwMCwgNS4wMDAwMDApIiBmaWxsPSIjMDAwMDAwIj4gICAgICAgICAgICA8cGF0aCBkPSJNMTYuMjg0NjM4Niw3LjY0NTA5NTI4IEMxNy43Mjg3NTU2LDYuMTU2NzUxODYgMTcuNzExODk3OSwzLjc4MTUzNzIgMTYuMjQzMzU1LDIuMzEyOTk0MjMgQzE0Ljc1OTM2MjYsMC44MjkwMDE5MjMgMTIuMzUzMzM1NywwLjgyOTAwMTkyMyAxMC44NjkzNDM0LDIuMzEyOTk0MjMgQzEwLjY3NzA3ODYsMi41MDUyNTkwNiAxMC40MzMyMDYzLDIuNzQwNDk5NzQgMTAuMTM2NjEzOCwzLjAxOTk0NTIgTDkuMzEzNzA4NSwzLjc5NTI3NTMzIEw4LjQ5MDgwMzI0LDMuMDE5OTQ1MiBDOC4xOTQyMTA3LDIuNzQwNDk5NzQgNy45NTAzMzg0MSwyLjUwNTI1OTA2IDcuNzU4MDczNTgsMi4zMTI5OTQyMyBDNi4yNzQwODEyNywwLjgyOTAwMTkyMyAzLjg2ODA1NDM1LDAuODI5MDAxOTIzIDIuMzg0MDYyMDQsMi4zMTI5OTQyMyBDMC45MTU1MzcxMDQsMy43ODE1MTkxNyAwLjg5ODU4MzE0NSw2LjE1Njg3MDM4IDIuMzI5NjczNjIsNy42MzI2MTczNSBMOS4zMTM2NjYsMTQuNjE2NjgyMyBMMTYuMjg0NjM4Niw3LjY0NTA5NTI4IFogTTEuNTM1NTMzOTEsMS40NjQ0NjYwOSBDMy40ODgxNTUzNiwtMC40ODgxNTUzNjUgNi42NTM5ODAyNiwtMC40ODgxNTUzNjUgOC42MDY2MDE3MiwxLjQ2NDQ2NjA5IEM4Ljc4OTQwODQzLDEuNjQ3MjcyOCA5LjAyNTExMDY5LDEuODc0NjMyNjIgOS4zMTM3MDg1LDIuMTQ2NTQ1NTUgQzkuNjAyMzA2MzEsMS44NzQ2MzI2MiA5LjgzODAwODU3LDEuNjQ3MjcyOCAxMC4wMjA4MTUzLDEuNDY0NDY2MDkgQzExLjk3MzQzNjcsLTAuNDg4MTU1MzY1IDE1LjEzOTI2MTYsLTAuNDg4MTU1MzY1IDE3LjA5MTg4MzEsMS40NjQ0NjYwOSBDMTkuMDI2MzQxMywzLjM5ODkyNDI5IDE5LjA0NDMzNTYsNi41MjQxMjA1IDE3LjE0NTg2Niw4LjQ4MDczMTE2IEwxMC4wMjA4MTUzLDE1LjYwNjYwMTcgQzkuNjMwMzExNDMsMTUuOTk3MTQ2NCA4Ljk5NzE0NjQ1LDE1Ljk5NzE3OTYgOC42MDY2MDE3MiwxNS42MDY2NzU3IEwxLjQ4MTE0MTA4LDguNDgxMTQxMDggQy0wLjQxNjkxODU5OCw2LjUyNDEyMDUgLTAuMzk4OTI0Mjk0LDMuMzk4OTI0MjkgMS41MzU1MzM5MSwxLjQ2NDQ2NjA5IFoiIGlkPSLlm77moIfpopzoibIiPjwvcGF0aD4gICAgICAgIDwvZz4gICAgPC9nPjwvc3ZnPg==);-moz-mask-image:url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSIyNHB4IiBoZWlnaHQ9IjI0cHgiIHZpZXdCb3g9IjAgMCAyNCAyNCIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj4gICAgICAgIDx0aXRsZT4zLkljb25zL091dGxpbmVkL2xpa2U8L3RpdGxlPiAgICA8ZGVzYz5DcmVhdGVkIHdpdGggU2tldGNoLjwvZGVzYz4gICAgPGcgaWQ9IjMuSWNvbnMvT3V0bGluZWQvbGlrZSIgc3Ryb2tlPSJub25lIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCIgZmlsbC1vcGFjaXR5PSIwLjkiPiAgICAgICAgPGcgaWQ9ImNvbW1vbl9pY29uc19saWtlIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgzLjAwMDAwMCwgNS4wMDAwMDApIiBmaWxsPSIjMDAwMDAwIj4gICAgICAgICAgICA8cGF0aCBkPSJNMTYuMjg0NjM4Niw3LjY0NTA5NTI4IEMxNy43Mjg3NTU2LDYuMTU2NzUxODYgMTcuNzExODk3OSwzLjc4MTUzNzIgMTYuMjQzMzU1LDIuMzEyOTk0MjMgQzE0Ljc1OTM2MjYsMC44MjkwMDE5MjMgMTIuMzUzMzM1NywwLjgyOTAwMTkyMyAxMC44NjkzNDM0LDIuMzEyOTk0MjMgQzEwLjY3NzA3ODYsMi41MDUyNTkwNiAxMC40MzMyMDYzLDIuNzQwNDk5NzQgMTAuMTM2NjEzOCwzLjAxOTk0NTIgTDkuMzEzNzA4NSwzLjc5NTI3NTMzIEw4LjQ5MDgwMzI0LDMuMDE5OTQ1MiBDOC4xOTQyMTA3LDIuNzQwNDk5NzQgNy45NTAzMzg0MSwyLjUwNTI1OTA2IDcuNzU4MDczNTgsMi4zMTI5OTQyMyBDNi4yNzQwODEyNywwLjgyOTAwMTkyMyAzLjg2ODA1NDM1LDAuODI5MDAxOTIzIDIuMzg0MDYyMDQsMi4zMTI5OTQyMyBDMC45MTU1MzcxMDQsMy43ODE1MTkxNyAwLjg5ODU4MzE0NSw2LjE1Njg3MDM4IDIuMzI5NjczNjIsNy42MzI2MTczNSBMOS4zMTM2NjYsMTQuNjE2NjgyMyBMMTYuMjg0NjM4Niw3LjY0NTA5NTI4IFogTTEuNTM1NTMzOTEsMS40NjQ0NjYwOSBDMy40ODgxNTUzNiwtMC40ODgxNTUzNjUgNi42NTM5ODAyNiwtMC40ODgxNTUzNjUgOC42MDY2MDE3MiwxLjQ2NDQ2NjA5IEM4Ljc4OTQwODQzLDEuNjQ3MjcyOCA5LjAyNTExMDY5LDEuODc0NjMyNjIgOS4zMTM3MDg1LDIuMTQ2NTQ1NTUgQzkuNjAyMzA2MzEsMS44NzQ2MzI2MiA5LjgzODAwODU3LDEuNjQ3MjcyOCAxMC4wMjA4MTUzLDEuNDY0NDY2MDkgQzExLjk3MzQzNjcsLTAuNDg4MTU1MzY1IDE1LjEzOTI2MTYsLTAuNDg4MTU1MzY1IDE3LjA5MTg4MzEsMS40NjQ0NjYwOSBDMTkuMDI2MzQxMywzLjM5ODkyNDI5IDE5LjA0NDMzNTYsNi41MjQxMjA1IDE3LjE0NTg2Niw4LjQ4MDczMTE2IEwxMC4wMjA4MTUzLDE1LjYwNjYwMTcgQzkuNjMwMzExNDMsMTUuOTk3MTQ2NCA4Ljk5NzE0NjQ1LDE1Ljk5NzE3OTYgOC42MDY2MDE3MiwxNS42MDY2NzU3IEwxLjQ4MTE0MTA4LDguNDgxMTQxMDggQy0wLjQxNjkxODU5OCw2LjUyNDEyMDUgLTAuMzk4OTI0Mjk0LDMuMzk4OTI0MjkgMS41MzU1MzM5MSwxLjQ2NDQ2NjA5IFoiIGlkPSLlm77moIfpopzoibIiPjwvcGF0aD4gICAgICAgIDwvZz4gICAgPC9nPjwvc3ZnPg==)"></view>
+          </view>
+          <text class="sk-transparent sk-text-18-7500-177 sk-text">添加至我喜欢</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</template>

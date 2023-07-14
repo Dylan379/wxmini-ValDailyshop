@@ -1,0 +1,44 @@
+<!--packageIndex/pages/maine/maine.wxml-->
+<view class="index">
+  <view class="nav-bar-title">
+    <view wx:for="{{navBarTitle}}" wx:key="index">
+      <view bindtap="goToPage" data-index="{{index}}">{{navBarTitle[index].text}}</view>
+      <view class="{{currentIndex===index?'under-line':''}}"></view>
+    </view>
+  </view>
+  <view class="maine">
+    <view>
+      <view wx:if="{{!hasUserInfo}}" class="user">
+        <view class="wx-user-info">
+          <image src="{{avatarUrl || 'https://cube.elemecdn.com/0/88/03b0d39583f48206768a7534e55bcpng.png'}}" mode="" class="avatar">
+            <button plain="true" open-type="chooseAvatar" bindchooseavatar="getAvatar"></button>
+          </image>
+        </view>
+        <view class="valo-user-info">
+          <text>ID:{{account}}</text>
+        </view>
+      </view>
+      <view wx:else class="user">
+        <view class="wx-user-info">
+          <view>
+            <image src="{{avatarUrl}}" mode="" class="avatar" />
+          </view>
+        </view>
+        <view class="valo-user-info">
+          <text>ID:{{account}}</text>
+        </view>
+      </view>
+      <view wx:if="{{!hasLogin}}" class="login">
+        <button type="primary" bindtap="login">登录</button>
+      </view>
+    </view>
+    <view wx:if="{{hasLogin}}" class="ability">
+      <view wx:for="{{ability}}" wx:key="index">
+        <view class="my-ability" catchtap="goToAbilityPage" data-index="{{index}}">
+          <mp-icon icon="{{ability[index].icon}}" color="#d13639" size="{{50}}"></mp-icon>
+          <text>{{ability[index].name}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

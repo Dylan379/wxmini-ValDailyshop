@@ -1,0 +1,37 @@
+<!--ability/pages/comment/comment.wxml-->
+<view class="index">
+  <view class="dailyShop">
+    <text>今日商店</text>
+    <view class="displayDailyShop">
+      <swiper indicator-dots='true' bindchange="changeWeapon">
+        <block wx:for="{{dailyWeaponInfo}}" wx:key="index">
+          <swiper-item>
+            <image style="background-image: url({{dailyWeaponInfo[index].skinLevelUrl}});  background-color: {{skinLevelColor[dailyWeaponInfo[index].contentTierUuid]}};" src="{{dailyWeaponInfo[index].chromas[chromasIndex].fullRender}}" mode="aspectFit" />
+            <text class="weaponName">{{dailyWeaponInfo[index].displayName}}</text>
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+  </view>
+  <view class="score">
+    <text>皮肤打分</text>
+    <view class="score-display">
+      <view class="stars">
+        <view wx:for="{{scores}}" wx:key="index" catchtap="ligtingStar" data-index="{{index}}">
+          <mp-icon wx:if="{{scores[index].isBright}}" icon="star" size="{{40}}" color="#d13639" type="field"></mp-icon>
+          <mp-icon wx:else icon="star" color="#d13639" size="{{40}}"></mp-icon>
+        </view>
+      </view>
+      <text class="score-discript">{{scores[starIndex].pointDiscript}}</text>
+    </view>
+  </view>
+  <view class="comment">
+      <text class="comment-title">锐评</text>
+      <view class="comment-textarea">
+        <textarea class="textarea" value="{{myComment}}" 	placeholder="点击输入您的评价,不超过30字!" maxlength="30" bindinput="inputComment"/>
+      </view>
+  </view>
+  <view class="submit" bindtap="submitComment">
+    <mp-icon  icon="done" color="#fff" size="{{40}}"></mp-icon>
+  </view>
+</view>

@@ -1,0 +1,90 @@
+.container{
+  .title{ 
+    font-size: 1.55rem;
+    font-weight:600;
+    margin-bottom: 85rpx;
+  }
+  .riotAccInfo{
+    height: 200rpx;
+    label{
+      box-sizing: content-box;
+      padding:25rpx 15rpx;
+      display: flex;
+      color:#525252;
+      border: 2rpx solid transparent;
+      border-radius: 10rpx;
+      background-color: #e7e7e7;
+      font-weight: 700;
+      input{
+        padding-top: 2rpx;
+      }
+    }
+    label:focus-within{
+      background-color: #f9f9f9;
+      border: 2rpx solid black;
+    }
+    .riotUserPwd{
+       margin-top:20rpx;
+      input{
+        padding-left: 1rem;
+      }
+    }
+  }
+  .isLoading{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100rpx;
+    width: 158rpx;
+    height: 158rpx;
+    mp-icon{
+      animation: rotate 1s linear infinite;
+    }
+  }
+  @keyframes rotate {
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+@-webkit-keyframes rotate {
+  0% {
+      transform: rotate(0);
+  }
+  100% {
+      transform: rotate(360deg);
+  }
+}
+
+  .login{
+    display: flex;
+    justify-content: center;
+    margin-top: 100rpx;
+    width: 150rpx;
+    height: 150rpx;
+    border: 4rpx solid #e8e8e8;
+    border-radius: 50rpx;
+    view{
+      padding: 54rpx 0;
+    }
+  }
+
+  .loginReady{
+    display: flex;
+    justify-content: center;
+    margin-top: 100rpx;
+    width: 150rpx;
+    height: 150rpx;
+    background-color: #d13639;
+    border: 4rpx solid #d13639;
+    border-radius: 50rpx;
+    view{
+      color: white;
+      padding: 54rpx 0;
+    }
+  }
+
+}
+

@@ -1,0 +1,15 @@
+<!--pages/loginVerify/loginVerify.wxml-->
+<view class="container">
+  <view class="title">
+    <text>二步验证玩家,请输入验证码</text>
+  </view>
+  <view class="verifyCodeField">
+    <block wx:for="{{6}}" wx:key="index">
+      <text class="{{index===verifyCode.length?'textFocus':''}}" bindtap="onFocus">{{verifyCode[index]}}</text>
+    </block>
+  </view>
+  <input type="number" maxlength="{{6}}" focus="{{isFocus}}" bindinput="setVerifyCode"/>
+  <view class="loading">
+    <mp-loading animated="{{false}}" type="circle"  show="{{isShowLoading}}" tips="验证中..." mask="{{isShowMask}}"></mp-loading>
+  </view>
+</view>

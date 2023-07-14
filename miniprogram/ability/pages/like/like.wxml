@@ -1,0 +1,24 @@
+<!--ability/pages/like/like.wxml-->
+<view class="index">
+  <view class="title">
+    <text>我的喜欢</text>
+  </view>
+  <view class="myLikes">
+    <view class="displaymyLikes">
+      <view wx:for="{{weaponInfo}}" wx:key="index" class="likes">
+        <view class="displayWeapon">
+          <image style="background-image: url({{weaponInfo[index].skinLevelUrl}});  background-color: {{skinLevelColor[weaponInfo[index].contentTierUuid]}};" src="{{weaponInfo[index].chromas[chromasIndex].fullRender}}" mode="aspectFit" />
+          <text class="weaponName">{{weaponInfo[index].displayName}}</text>
+        </view>
+        <view>
+          <view class="icon" catchtap="bellringMe" data-index="{{index}}">
+            <mp-icon icon="bellring-on" color="#d13639" size="{{35}}" type="{{weaponInfo[index].displayIcon || 'outline'}}"></mp-icon>
+          </view>
+          <view class="icon" catchtap="disLike" data-index="{{index}}">
+            <mp-icon icon="delete" color="#d13639" size="{{35}}"></mp-icon>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

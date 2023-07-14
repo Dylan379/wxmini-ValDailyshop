@@ -1,0 +1,70 @@
+/* ability/pages/like/like.wxss */
+.index{
+  width: 95%;
+  margin: 0rpx 20rpx;
+  .title{
+    display: flex;
+    justify-content: center;
+    
+    text{
+      position: fixed;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      font-weight: 600;
+      z-index: 3;
+      background-color: white;
+    }
+  }
+  .myLikes {
+    margin-top: 50rpx;
+    text {
+      display: block;
+      font-size: 0.9em;
+      text-align: center;
+      font-weight: 600;
+    }
+
+    .displaymyLikes {
+      .likes{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .icon{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin: 40rpx 20rpx;
+          width: 80rpx;
+          height: 80rpx;
+          box-shadow: 0 0 15rpx 1rpx rgb(148, 148, 148);
+          border-radius: 20rpx;
+        }
+      }
+      .displayWeapon{
+        position: relative;
+        margin: 40rpx 0;
+        width: 85%;
+        image {
+          margin: 0 20rpx;
+          border-radius: 20rpx;
+          box-shadow: 0 0 15rpx 1rpx rgb(148, 148, 148);
+          width: 95%;
+          height: 220rpx;
+          background: no-repeat;
+          background-size: 40rpx 40rpx;
+          background-position: right 10rpx top 5rpx;
+        }
+        
+        .weaponName {
+          position: absolute;
+          color: white;
+          left: 50rpx;
+          bottom: 30rpx;
+        }
+      }
+      
+    }
+  }
+}

@@ -1,0 +1,74 @@
+<!--pages/index/index.wxml-->
+<!-- <navigation-bar></navigation-bar> -->
+<import src="index.skeleton.wxml" />
+<template is="skeleton" wx:if="{{!hasDailyWeaponInfo}}" />
+<view class="index" wx:else>
+  <view class="nav-bar-title">
+    <view wx:for="{{navBarTitle}}" wx:key="index">
+      <view bindtap="goToPage" data-index="{{index}}">{{navBarTitle[index].text}}</view>
+      <view class="{{currentIndex===index?'under-line':''}}"></view>
+    </view>
+  </view>
+  <view class="header">
+    <view class="title">
+      <text>
+        {{userInfo.name}}#{{userInfo.tag}},欢迎你！
+      </text>
+      <text decode="{{true}}">
+        剩余&nbsp;&nbsp;&nbsp;R点:{{myWallet.rp}}&nbsp;&nbsp;VP:{{myWallet.vp}}
+      </text>
+    </view>
+  </view>
+  <view class="dailyShop">
+    <text>今日商店</text>
+    <view class="displayDailyShop">
+      <swiper indicator-dots='true' bindchange="changeWeapon">
+        <block wx:for="{{dailyWeaponInfo}}" wx:key="index">
+          <swiper-item>
+            <image style="background-image: url({{dailyWeaponInfo[index].skinLevelUrl}});  background-color: {{skinLevelColor[dailyWeaponInfo[index].contentTierUuid]}};" src="{{dailyWeaponInfo[index].chromas[chromasIndex].fullRender}}" mode="aspectFit" />
+            <text class="weaponName">{{dailyWeaponInfo[index].displayName}}</text>
+            <text class="weaponCost">{{dailyWeaponCost[index]}}VP</text>
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+  </view>
+  <view wx:if="{{dailyWeaponInfo[weaponIndex].chromas[0].swatch != null}}" class="weaponSkinChromaIcon">
+    <block wx:for="{{dailyWeaponInfo[weaponIndex].chromas}}" wx:key="index">
+      <image src="{{dailyWeaponInfo[weaponIndex].chromas[index].swatch}}" mode="" bindtap="changeChromas" data-index="{{index}}" class="{{index === chromasIndex?'image-foucs':''}}" />
+    </block>
+  </view>
+  <view class="showWeaponVideo">
+    <view class="weaponLevels">
+      <view wx:for="{{dailyWeaponInfo[weaponIndex].levels}}" wx:key="index" bindtap="changeWeaponLevelVideo" data-id="{{index}}">
+        <view wx:if="{{index === weaponLevelVideoIndex}}">
+          <view style="color:{{skinLevelColor[dailyWeaponInfo[weaponIndex].contentTierUuid]}};">
+            等级{{index+1}}
+          </view>
+        </view>
+        <view wx:else>
+          等级{{index+1}}
+        </view>
+      </view>
+    </view>
+    <view wx:if="{{dailyWeaponInfo[weaponIndex].levels[weaponLevelVideoIndex].streamedVideo != null}}" class="weaponVideo">
+      <video src="{{dailyWeaponInfo[weaponIndex].levels[weaponLevelVideoIndex].streamedVideo}}" />
+    </view>
+    <view  class="text" wx:else>
+      此等级暂无展示
+    </view>
+  </view>
+  <view class="comment">
+    <view class="user-comment">
+      <view><text>来自用户--{{commentInfo.account}}--的锐评:</text></view>
+      <view class="the-comment">
+      <text>"{{commentInfo.comment}}"</text>
+      </view>
+      <view class="score"><text decode="true">&nbsp;</text><text>ta的评分是:{{commentInfo.score}}/100</text></view>
+    </view>
+    <view class="like" catchtap="addMylike">
+      <mp-icon icon="like" color="#d13639" size="{{50}}" type="{{likeType[weaponIndex]}}"></mp-icon>
+      <text>添加至我喜欢</text>
+    </view>
+  </view>
+</view>

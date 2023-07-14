@@ -1,0 +1,102 @@
+/* ability/pages/comment/comment.wxss */
+.index{
+  width: 95%;
+  margin: 10rpx auto;
+  .dailyShop {
+    text {
+      display: block;
+      text-align: center;
+      font-weight: 600;
+    }
+
+    .displayDailyShop {
+      swiper {
+        position: relative;
+        height: 260rpx;
+      }
+
+      image {
+        margin: 0 20rpx;
+        border-radius: 20rpx;
+        box-shadow: 0 0 15rpx 1rpx rgb(148, 148, 148);
+        width: 95%;
+        height: 220rpx;
+        background: no-repeat;
+        background-size: 40rpx 40rpx;
+        background-position: right 10rpx top 5rpx;
+      }
+
+      .weaponName {
+        position: absolute;
+        color: white;
+        left: 50rpx;
+        bottom: 50rpx;
+      }
+    }
+  }
+
+  .score{
+      margin: 20rpx 20rpx;
+      width: 95%;
+      text{
+        font-weight: 600;
+        display: flex;
+        justify-content: center;
+      }
+    .score-display{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 250rpx;
+        margin-top: 10rpx;
+        border-radius: 20rpx;
+        // box-shadow: 0 0 15rpx 1rpx rgb(148, 148, 148);
+        box-shadow: 0 0 10rpx 1rpx rgb(185, 184, 184);
+      .stars{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      view{
+        margin: 0 10rpx;
+      }
+      .score-discript{
+        margin-top: 20rpx;
+      }
+    }
+  }
+
+  .comment{
+    width: 95%;
+    margin: 20rpx auto;
+    
+    .comment-title{
+      display: flex;
+      justify-content: center;
+      font-weight: 600;
+    }
+    .comment-textarea{
+      display: flex;
+      justify-content: center;
+      margin-top: 10rpx;
+      border-radius: 20rpx;
+      // box-shadow: 0 0 15rpx 1rpx rgb(148, 148, 148);
+      box-shadow: 0 0 10rpx 1rpx rgb(185, 184, 184);
+      .textarea{
+        display: flex;
+        margin-top: 10rpx;
+        font-weight: 600;
+      }
+    }
+  }
+
+  .submit{
+    display: flex;
+    justify-content: center;
+    width: 30%;
+    margin: 0 auto;
+    background-color: #d13639;
+    border-radius: 20rpx;
+  }
+}

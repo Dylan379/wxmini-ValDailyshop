@@ -1,0 +1,40 @@
+<!--packageIndex/pages/bundles/bundles.wxml-->
+<view class="index">
+  <view class="nav-bar-title">
+    <view wx:for="{{navBarTitle}}" wx:key="index">
+      <view bindtap="goToPage" data-index="{{index}}">{{navBarTitle[index].text}}</view>
+      <view class="{{currentIndex===index?'under-line':''}}"></view>
+    </view>
+  </view>
+  <view wx:if="{{hasBundlesInfo}}">
+    <view class="bundles">
+      <view class="bundle-title">
+        <text>当前捆绑包:{{bundlesInfo[bundleIndex].name}}</text>
+        <text decode="true" class="price">售价: <text style="text-decoration: line-through;">{{bundlesInfo[bundleIndex].TotalBaseCost}}VP</text>&nbsp;&nbsp;<text>{{bundlesInfo[bundleIndex].TotalDiscountedCost}}VP</text>
+        </text>
+      </view>
+      <swiper indicator-dots='true' class="displayBundles" bindchange="changeBundle">
+        <block wx:for="{{bundlesInfo}}" wx:key="index">
+          <swiper-item>
+            <image class="banner" src="{{bundlesInfo[index].url}}" mode="scaleToFill" />
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+    <view class="displayItem">
+      <text>当前物品:{{bundlesInfo[bundleIndex].Items[itemIndex].name || '--暂未收录,游戏内查询--'}}</text>
+      <view>
+        <image src="{{bundlesInfo[bundleIndex].Items[itemIndex].displayUrl || '../../../asset/image/uwu-icon.png'}}" mode="aspectFit" />
+        <view class="item-price">
+          <text>基础价格:{{bundlesInfo[bundleIndex].Items[itemIndex].BasePrice}}VP</text>
+          <text>包内价格:{{bundlesInfo[bundleIndex].Items[itemIndex].DiscountedPrice}}VP</text>
+        </view>
+      </view>
+    </view>
+    <scroll-view show-scrollbar="true" class="bannerItems" scroll-x="true" enable-flex="true">
+      <view class="{{itemIndex === index?'item-focus':''}}" wx:for="{{bundlesInfo[bundleIndex].Items}}" wx:key="index">
+        <image bindtap="showLageImg" data-index="{{index}}" class="item" src="{{bundlesInfo[bundleIndex].Items[index].displayUrl || '../../../asset/image/uwu-icon.png'}}" mode="widthFix" />
+      </view>
+    </scroll-view>
+  </view>
+</view>

@@ -1,0 +1,113 @@
+/* packageIndex/pages/maine/maine.wxss */
+.nav-bar-title{
+  display: flex;
+  justify-content: space-around;
+  font-size: 1rem;
+  font-weight: 600;
+  view{
+    color: black;
+  }
+  .under-line{
+    display: flex;
+    justify-content: center;
+    height: 10rpx;
+    width: 40rpx;
+    margin: 0 auto;
+    border-radius: 10rpx;
+    background-color: black;
+    animation: fadeIn 0.5s;
+  }
+  @keyframes fadeIn {
+    0% {width:0rpx}
+  }
+  @-webkit-keyframes fadeIn{
+    0% {width:0rpx}
+  }
+}
+
+
+.index{
+  .maine{
+    width: 95%;
+    margin: 20rpx  auto;
+  }
+  .login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 180rpx;
+    button{
+      height: 50%;
+    }
+  }
+
+  .user{
+    position: relative;
+    height: 120rpx;
+    background-color: #eeeff1;
+    border-radius: 20rpx;
+    .wx-user-info{
+      position: absolute;
+      display: flex;
+      margin: 10rpx 0 0 10rpx;
+      .avatar{
+        position: relative;
+        width: 100rpx;
+        height: 100rpx;
+        border-radius: 50rpx;
+        button{
+          position: absolute;
+          top:0;
+          left: 0;
+          width: 100rpx;
+          height: 100rpx;
+          border-radius: 50rpx;
+          border: 0;
+        }
+      }
+      .wx-name{
+        margin-left: 10rpx;
+        font-size: 1.2rem;
+        font-weight: 600;
+        // color: white;
+        caret-color: transparent;
+      }
+    }
+    .valo-user-info{
+      position: absolute;
+      display: flex;
+      bottom: 10rpx;
+      right: 20rpx;
+      margin: 0 0 0 20rpx;
+      text{
+        font-size: 1.2rem;
+        font-weight: 600;
+        // color: white;
+      }
+    }
+  }
+  .ability{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 100rpx;
+    .my-ability{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-top: 50rpx;
+      width: 280rpx;
+      height: 280rpx;
+      border-radius: 20rpx;
+      // background-color: #d13639;
+      background-color: #eeeff1;
+      text{
+        text-align: center;
+        font-size: 1rem;
+        font-weight: 600;
+        color: #d13639;
+      }
+    }
+  }
+}

@@ -1,0 +1,21 @@
+<!--packageIndex/pages/nightMarket/nightMarket.wxml-->
+<view class="index">
+  <view class="nav-bar-title">
+    <view wx:for="{{navBarTitle}}" wx:key="index">
+      <view bindtap="goToPage" data-index="{{index}}">{{navBarTitle[index].text}}</view>
+      <view class="{{currentIndex===index?'under-line':''}}"></view>
+    </view>
+  </view>
+  <view class="nightMarket">
+    <view wx:for="{{bonusWeaponInfo}}" wx:key="index" class="card" catchtap="showBonusWeapon" data-index="{{index}}">
+      <view class="font" style="{{showFlag[index][1]}};background-color:{{skinLevelColor[bonusWeaponInfo[index].contentTierUuid]}};background-image:url({{bonusWeaponInfo[index].skinLevelUrl}})">
+        <image class="display-weapon" src="{{bonusWeaponInfo[index].levels[0].displayIcon}}" mode="aspectFit" />
+        <text class="discount">-{{bonusWeaponInfo[index].discountPercent}}%</text>
+        <text class="price">折后价格:{{bonusWeaponInfo[index].discountCosts}}VP</text>
+        <text class="name">{{bonusWeaponInfo[index].displayName}}</text>
+      </view>
+      <view class="back" style="{{showFlag[index][0]}};background-color:{{skinLevelColor[bonusWeaponInfo[index].contentTierUuid]}};background-image:url({{bonusWeaponInfo[index].skinLevelUrl}})">
+      </view>
+    </view>
+  </view>
+</view>

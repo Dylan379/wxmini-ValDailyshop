@@ -1,0 +1,217 @@
+/* pages/index/index.wxss */
+@import "index.skeleton.wxss";
+
+.index {
+  .header {
+    width: 95%;
+    margin: 0rpx 20rpx;
+    .title {
+      display: flex;
+      justify-content: space-between;
+      padding: 0 10rpx;
+      font-size: 0.8rem;
+      font-weight: 600;
+      text{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }
+
+
+  .dailyShop {
+    text {
+      display: block;
+      font-size: 0.9em;
+      text-align: center;
+      font-weight: 600;
+    }
+
+    .displayDailyShop {
+      swiper {
+        position: relative;
+        height: 260rpx;
+      }
+
+      image {
+        margin: 0 20rpx;
+        border-radius: 20rpx;
+        box-shadow: 0 0 10rpx 1rpx rgb(185, 184, 184);
+        width: 95%;
+        height: 220rpx;
+        background: no-repeat;
+        background-size: 40rpx 40rpx;
+        background-position: right 10rpx top 5rpx;
+      }
+
+      .weaponName {
+        position: absolute;
+        color: white;
+        left: 50rpx;
+        bottom: 50rpx;
+      }
+
+      .weaponCost {
+        position: absolute;
+        color: white;
+        right: 30rpx;
+        bottom: 50rpx;
+      }
+    }
+  }
+
+  .weaponTab {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: 0 auto;
+
+    .weaponInfo {
+      height: 140rpx;
+      margin-bottom: 20rpx;
+      border-radius: 20rpx;
+      box-shadow: 0 0 10rpx 1rpx rgb(185, 184, 184);
+      font-weight: 600;
+      background: no-repeat;
+      background-size: 80rpx 80rpx;
+      background-position: center center;
+
+      text {
+        display: block;
+        padding: 0 10rpx;
+      }
+
+      :last-child {
+        text-align: end;
+        margin-top: 34rpx;
+      }
+    }
+  }
+
+  .weaponSkinChromaIcon{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin:10rpx auto 0;
+    width: 50%;
+    
+    image{
+      height: 50rpx;
+      width: 50rpx;
+      border-radius: 30rpx;
+     
+    }
+    .image-foucs{
+      height: 60rpx;
+      width: 60rpx;
+      box-shadow: 0 0 10rpx 1rpx rgb(185, 184, 184);
+    }
+  }
+
+
+  .showWeaponVideo{
+    display: flex;
+    justify-content: space-around;
+    width: 95%;
+    margin: 20rpx auto;
+    box-shadow: 0 0 10rpx 1rpx rgb(185, 184, 184);
+    border-radius: 20rpx;
+    .weaponLevels{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+      view{
+        font-size: 1rem;
+        font-weight: 600;
+      }
+    }
+    .weaponVideo{
+      display: flex;
+      video{
+        width: 590rpx;
+        height: 340rpx;
+        margin: 10rpx 0;
+    }
+    }
+    .text{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+        width: 590rpx;
+        height: 340rpx;
+        margin: 10rpx 0;
+    }
+  }
+
+  .comment{
+    display: flex;
+    justify-content: space-between;
+    width: 95%;
+    height: 200rpx;
+    margin: 50rpx auto;
+    .user-comment{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      width: 65%;
+      font-size: 0.8rem;
+      font-weight: 600;
+      box-shadow: 0 0 10rpx 1rpx rgb(185, 184, 184);
+      // background-color: #f6f7f8;
+      border-radius: 20rpx;
+      .the-comment{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text{
+          width: 90%;
+          text-align: center;
+        }
+      }
+      .score{
+        display: flex;
+        justify-content: space-between;
+      }
+      view{
+        margin: 0 10rpx;
+      }
+    }
+    .like{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width:30%;
+      font-weight: 600;
+      box-shadow: 0 0 10rpx 1rpx rgb(185, 184, 184);
+      border-radius: 20rpx;
+    }
+  }
+}
+.nav-bar-title{
+  display: flex;
+  justify-content: space-around;
+  font-size: 1rem;
+  font-weight: 600;
+  view{
+    color: black;
+  }
+  .under-line{
+    display: flex;
+    justify-content: center;
+    height: 10rpx;
+    width: 40rpx;
+    margin: 0 auto;
+    border-radius: 10rpx;
+    background-color: black;
+    animation: fadeIn 0.5s;
+  }
+  @keyframes fadeIn {
+    0% {width:0rpx}
+  }
+  @-webkit-keyframes fadeIn{
+    0% {width:0rpx}
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "pages": [
+    "pages/login/login",
+    "pages/loginVerify/loginVerify"
+  ],
+  "subPackages": [{
+      "root": "packageIndex",
+      "pages": [
+        "pages/maine/maine",
+        "pages/bundles/bundles",
+        "pages/nightMarket/nightMarket",
+        "pages/index/index"
+      ]
+    },
+    {
+      "root": "ability",
+      "pages": [
+        "pages/search/search",
+        "pages/comment/comment",
+        "pages/like/like",
+        "pages/belling/belling"
+      ]
+    }
+
+  ],
+
+
+
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "瓦批的dailyShop",
+    "navigationBarTextStyle": "black"
+  },
+  "lazyCodeLoading": "requiredComponents",
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "useExtendedLib": {
+    "weui": true
+  }
+}

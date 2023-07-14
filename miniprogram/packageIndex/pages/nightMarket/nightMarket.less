@@ -1,0 +1,88 @@
+/* packageIndex/pages/nightMarket/nightMarket.wxss */
+.nav-bar-title{
+  display: flex;
+  justify-content: space-around;
+  font-size: 1rem;
+  font-weight: 600;
+  view{
+    color: black;
+  }
+  .under-line{
+    display: flex;
+    justify-content: center;
+    height: 10rpx;
+    width: 40rpx;
+    margin: 0 auto;
+    border-radius: 10rpx;
+    background-color: black;
+    animation: fadeIn 0.5s;
+  }
+  @keyframes fadeIn {
+    0% {width:0rpx}
+  }
+  @-webkit-keyframes fadeIn{
+    0% {width:0rpx}
+  }
+}
+
+.index{
+  .nightMarket{
+    width: 95%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 0 auto;
+    .card{
+      position: relative;
+      view{
+        width: 320rpx;
+        height: 420rpx;
+        margin:15rpx 0;
+        border-radius: 20rpx;
+        backface-visibility: hidden;
+        transition: 0.5s ease-in-out;
+      }
+      .back{
+        // background-color: cadetblue;
+        background: no-repeat;
+        background-size: 150rpx 150rpx;
+        background-position:center;
+        transform: rotateY(180deg);
+      }
+      .font{
+        position: absolute;
+        top: 0;
+        left: 0;
+        overflow: hidden;
+        background: no-repeat;
+        background-size: 40rpx 40rpx;
+        background-position: right 10rpx top 5rpx;
+        .display-weapon{
+          width: 350rpx;
+          height: 400rpx;
+          transform: rotate(60deg);
+        }
+        text{
+          position: absolute;
+          color: white;
+          font-size: 0.8rem;
+          font-weight: 600;
+        }
+        .discount{
+          top: 5rpx;
+          right: 55rpx;
+          color: red;
+        }
+        .price{
+          bottom: 50rpx;
+          left: 10rpx;
+        }
+        .name{
+          bottom: 10rpx;
+          left: 10rpx;
+        }
+
+      }
+    }
+  }
+}

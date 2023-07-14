@@ -1,0 +1,44 @@
+<!--ability/pages/search/search.wxml-->
+<view class="index">
+  <view class="header">
+    <view class="search">
+      <view>
+        <view class="title">
+          <text>请输入皮肤名或武器全称如(支持简体):</text>
+        </view>
+        <view class="example">
+          <text decode="true">異星霸主&nbsp;或&nbsp;異星霸主 暴徒</text>
+        </view>
+      </view>
+      <view class="search-bar">
+        <view>
+          <input type="text" class="search-input" bindinput="setSkinName" />
+        </view>
+        <view>
+          <view class="search-btn" bindtap="searchWeapons" style="border-color: {{btnColor}};">
+            <mp-icon icon="search" color="{{btnColor}}" size="{{30}}"></mp-icon>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class="mySearch">
+    <view class="displaymySearch">
+      <view wx:for="{{skinBoundlesInfo}}" wx:key="index" class="likes">
+        <view class="displayWeapon">
+          <image style="background-image: url({{skinLevelColor[skinBoundlesInfo[index].contentTierUuid][1]}});  background-color: {{skinLevelColor[skinBoundlesInfo[index].contentTierUuid][0]}};" src="{{skinBoundlesInfo[index].chromas[chromasIndex].fullRender}}" mode="aspectFit" />
+          <text class="weaponName">{{skinBoundlesInfo[index].displayName}}</text>
+        </view>
+        <view>
+          <view class="icon" catchtap="addMylike" data-index="{{index}}">
+            <mp-icon icon="like" color="#d13639" size="{{35}}" type="{{skinBoundlesInfo[index].displayIcon || 'outline'}}"></mp-icon>
+          </view>
+          <view class="icon" catchtap="bellringMe" data-index="{{index}}">
+            <mp-icon icon="bellring-on" color="#d13639" size="{{35}}"></mp-icon>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

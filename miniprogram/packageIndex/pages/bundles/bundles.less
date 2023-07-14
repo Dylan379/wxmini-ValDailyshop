@@ -1,0 +1,114 @@
+/* packageIndex/pages/bundles/bundles.wxss */
+.nav-bar-title {
+  display: flex;
+  justify-content: space-around;
+  font-size: 1rem;
+  font-weight: 600;
+
+  view {
+    color: black;
+  }
+
+  .under-line {
+    display: flex;
+    justify-content: center;
+    height: 10rpx;
+    width: 40rpx;
+    margin: 0 auto;
+    border-radius: 10rpx;
+    background-color: black;
+    animation: fadeIn 0.5s;
+  }
+
+  @keyframes fadeIn {
+    0% {
+      width: 0rpx
+    }
+  }
+
+  @-webkit-keyframes fadeIn {
+    0% {
+      width: 0rpx
+    }
+  }
+}
+
+.index {
+  .bundles {
+    .bundle-title{
+      display: flex;
+      margin: 0 auto;
+      width: 95%;
+      justify-content: space-between;
+      .price{
+        display: flex;
+      }
+      text{
+        font-size: 0.9rem;
+        font-weight: 600;
+      }
+    }
+    swiper {
+      height: 310rpx;
+    }
+
+    .banner {
+      margin: 20rpx 20rpx;
+      width: 95%;
+      height: 250rpx;
+    }
+  }
+
+  .displayItem {
+    position: relative;
+    text{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 1rem;
+      font-weight: 600;
+    }
+    image{
+      width: 95%;
+      height: 300rpx;
+      margin: 20rpx 20rpx;
+      background-color: #cfd1d1;
+      box-shadow: 0 0 10rpx 1rpx rgb(185, 184, 184);
+      border-radius: 20rpx;
+    }
+    .item-price{
+      position: absolute;
+      bottom: 60rpx;
+      left: 30rpx;
+      text{
+        color: white;
+        justify-content: start;
+        font-size: 0.9rem;
+      }
+    }
+  }
+
+  .bannerItems {
+    display: flex;
+    margin: 20rpx auto;
+    width: 95%;
+    height: 150rpx;
+    view{
+      display: flex;
+      align-items: center;
+      margin: 0 5rpx;
+      background-color: #cfd1d1;
+      border: 2rpx solid transparent;
+      border-radius: 10rpx;
+      .item {
+        height: 150rpx;
+        width: 141rpx;
+      }
+    }
+    .item-focus{
+      box-sizing: content-box;
+      border: 2rpx solid skyblue;
+      box-shadow: 0 0 20rpx 5rpx rgb(122, 241, 245);
+    }
+  }
+}

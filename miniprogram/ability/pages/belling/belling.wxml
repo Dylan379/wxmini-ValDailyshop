@@ -1,0 +1,29 @@
+<!--ability/pages/belling/belling.wxml-->
+<view class="index">
+  <view class="header">
+    <view class="my-emai">
+      <view class="title">
+        <text>绑定邮箱,及时提醒</text>
+      </view>
+      <view class="email-bar">
+        <view class="email-input"><input type="text" bindinput="setEmail" value="{{myEmail}}" /></view>
+        <view class="email-btn" catchtap="setBellringEmail">绑定推送邮箱</view>
+      </view>
+    </view>
+  </view>
+  <view class="myLikes">
+    <view class="displaymyLikes">
+      <view wx:for="{{weaponInfo}}" wx:key="index" class="likes">
+        <view class="displayWeapon">
+          <image style="background-image: url({{weaponInfo[index].skinLevelUrl}});  background-color: {{skinLevelColor[weaponInfo[index].contentTierUuid]}};" src="{{weaponInfo[index].chromas[chromasIndex].fullRender}}" mode="aspectFit" />
+          <text class="weaponName">{{weaponInfo[index].displayName}}</text>
+        </view>
+        <view>
+          <view class="icon" catchtap="disBellring" data-index="{{index}}">
+            <mp-icon icon="delete" color="#d13639" size="{{35}}"></mp-icon>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
