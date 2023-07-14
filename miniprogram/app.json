@@ -37,5 +37,8 @@
   "sitemapLocation": "sitemap.json",
   "useExtendedLib": {
     "weui": true
-  }
+  },
+  "networkTimeout": {
+    "request": 50000
+}
 }

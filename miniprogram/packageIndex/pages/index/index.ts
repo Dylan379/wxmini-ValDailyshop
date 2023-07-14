@@ -30,8 +30,7 @@ Page({
     commentInfo: {
       comment: ''
     },
-    likeType: ['outline', 'outline', 'outline', 'outline'],
-    uuid:["411e4a55-4e59-7757-41f0-86a53f101bb5","12831559-44ee-c708-b97c-29a43938e3cd", "82da0235-41c6-4a04-8296-e9baaa8f12a0", "12dce8f5-42fe-87c6-ef37-8aa4e55f1f64"]
+    likeType: ['outline', 'outline', 'outline', 'outline']
   },
   addMylike() {
     const that = this;
@@ -121,8 +120,6 @@ Page({
       // dailyWeaponCost: this.getRightCost(this.data.uuid),
       myWallet: shopData.wallet,
     })
-    console.log('1111111');
-    
     let promiseAllArr = [];
     for (let i = 0; i < 4; i++) {
       promiseAllArr.push(getDailyWeaponInfo(shopData.storefront.SkinsPanelLayout.SingleItemOffers[i]))

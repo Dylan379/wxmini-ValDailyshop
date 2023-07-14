@@ -14,7 +14,7 @@ Page({
     currentIndex: 3,
     ability:[
       {
-        name:'查询武器或捆绑包',
+        name:'查询武器皮肤系列',
         icon:'search',
         url:'../../../ability/pages/search/search'
       },
