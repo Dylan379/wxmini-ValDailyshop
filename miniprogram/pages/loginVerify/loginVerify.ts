@@ -16,7 +16,6 @@ Page({
     this.setData({isFocus:true});
   },
   setVerifyCode(e:any){
-    let thisPageData = this.data;
     const that = this;
     this.setData({verifyCode:e.detail.value});
     if(this.data.verifyCode.length === 6){
@@ -35,11 +34,11 @@ Page({
         success(res:any){
           if(res.data.code === 0){
             const users = wx.getStorageSync('users') || {}
-            users[thisPageData.account] = res.data.user;
+            users[that.data.account] = res.data.user;
             wx.setStorageSync('users',users);
             wx.removeStorageSync('shopData')
             wx.redirectTo({
-              url:'../../packageIndex/pages/index/index?account='+thisPageData.account+'&userInfo='+JSON.stringify(res.data.user)
+              url:'../../packageIndex/pages/index/index?account='+that.data.account+'&userInfo='+JSON.stringify(res.data.user)
             })
           }else{
             if(res.data.info === "未知错误"){

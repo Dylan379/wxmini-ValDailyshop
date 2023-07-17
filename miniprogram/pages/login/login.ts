@@ -57,6 +57,7 @@ Page({
     this.setData({
       isLoading: true
     })
+    wx.setStorageSync('account',this.data.userName)
     let thisIndex = this;
     wx.request({
       method: 'POST',

@@ -39,6 +39,6 @@
     "weui": true
   },
   "networkTimeout": {
-    "request": 50000
+    "request": 300000
 }
 }
